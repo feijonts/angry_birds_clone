@@ -1,8 +1,8 @@
 import pygame
-from settings import Settings
-from game_screen import GameScreen
-from menu_screen import MenuScreen
-from defeat_screen import DefeatScreen
+from .settings import Settings
+from .game_screen import GameScreen
+from .menu_screen import MenuScreen
+from .defeat_screen import DefeatScreen
 
 def main():
     pygame.init()
