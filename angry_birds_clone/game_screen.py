@@ -133,10 +133,10 @@ class GameScreen:
     def __init__(self, screen, settings):
         self.screen = screen
         self.settings = settings
-        self.bird = Bird(os.path.join('assets', 'bird.png'), screen, settings)
+        self.bird = Bird(os.path.join(os.path.dirname(__file__), 'assets', 'bird.png'), screen, settings)
         self.planets = self.create_planets()
         self.pigs = self.create_pigs()
-        self.heart_image = pygame.image.load(os.path.join('assets', 'heart.png')).convert_alpha()
+        self.heart_image = pygame.image.load(os.path.join(os.path.dirname(__file__), 'assets', 'heart.png')).convert_alpha()
         self.heart_image = pygame.transform.scale(self.heart_image, (30, 30))
         self.settings.attempts = len(self.pigs) * 2
         self.settings.lives = len(self.pigs) * 2
@@ -153,7 +153,7 @@ class GameScreen:
                 valid_position = all(math.hypot(x - planet.position.x, y - planet.position.y) > min_distance for planet in planets)
             gravity_strength = random.uniform(1, 3)
             is_repulsive = random.choice([True, False])
-            planets.append(Planet(os.path.join('assets', 'planet.png'), (x, y), gravity_strength, is_repulsive, self.screen))
+            planets.append(Planet(os.path.join(os.path.dirname(__file__), 'assets', 'planet.png'), (x, y), gravity_strength, is_repulsive, self.screen))
         return planets
 
     def create_pigs(self):
@@ -167,7 +167,7 @@ class GameScreen:
                 x = random.randint(self.settings.screen_width // 3, self.settings.screen_width - 50)
                 y = random.randint(spawn_height_start, self.settings.screen_height - 50)
                 valid_position = all(math.hypot(x - pig.position.x, y - pig.position.y) > min_distance for pig in pigs)
-            pigs.append(Pig(os.path.join('assets', 'porco.png'), (x, y), self.screen))
+            pigs.append(Pig(os.path.join(os.path.dirname(__file__), 'assets', 'porco.png'), (x, y), self.screen))
         return pigs
 
     def handle_event(self, event):

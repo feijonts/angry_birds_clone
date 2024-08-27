@@ -1,4 +1,5 @@
 import pygame
+import sys
 from .settings import Settings
 from .game_screen import GameScreen
 from .menu_screen import MenuScreen
@@ -8,10 +9,9 @@ def main():
     pygame.init()
     
     settings = Settings()
-    settings.restart_game = False
     
     screen = pygame.display.set_mode((settings.screen_width, settings.screen_height))
-    pygame.display.set_caption("Angry Birds")
+    pygame.display.set_caption("Angry Birds Clone")
     
     menu_screen = MenuScreen(screen, settings)
     game_screen = GameScreen(screen, settings)
