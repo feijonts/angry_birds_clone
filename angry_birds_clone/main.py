@@ -1,5 +1,4 @@
 import pygame
-import sys
 from settings import Settings
 from game_screen import GameScreen
 from menu_screen import MenuScreen

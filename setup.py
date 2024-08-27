@@ -8,10 +8,8 @@ setup(
     install_requires=[
         "pygame>=2.0.0",
         "numpy",
-        "math",
-        "os",
-        "sys",
         "random",
+        "setuptools"
     ],
     entry_points={
         'console_scripts': [

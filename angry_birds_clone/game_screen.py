@@ -2,7 +2,6 @@ import pygame
 import random
 import math
 import os
-import sys
 
 class Bird:
     def __init__(self, image_path, screen, settings):
