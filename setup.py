@@ -21,8 +21,8 @@ setup(
     package_data={
         'angry_birds_clone': ['assets/*.png'],
     },
-    author="Seu Nome",
-    author_email="seuemail@exemplo.com",
+    author="Joao Citino & Matheus Porto",
+    author_email="joaocitino10@gmail.com",
     description="Um clone de Angry Birds em Python usando Pygame e física.",
     long_description=open('README.md').read(),
     long_description_content_type="text/markdown",
