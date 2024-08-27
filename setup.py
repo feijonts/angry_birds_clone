@@ -8,7 +8,6 @@ setup(
     install_requires=[
         "pygame>=2.0.0",
         "numpy",
-        "random",
         "setuptools"
     ],
     entry_points={
